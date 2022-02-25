@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=0">
+  <link rel="icon" href="<%= BASE_URL %>logo.png">
+  <title>宝莉安娜官网</title>
+
+  <style>
+    #app {
+      position: relative;
+      /* height: 100%; */
+    }
+
+    .el-message {
+      z-index: 999999999999999 !important;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
+
+    .footer-container {
+      width: 100%;
+      height: 50px;
+      /* display: flex; */
+      display: none;
+      justify-content: center;
+      line-height: 50px;
+      background-color: #99b6d3;
+      color: #fff;
+      font-size: 12px;
+      text-align: center;
+      display: flex;
+    }
+
+    .footer-font {
+      margin-right: 10px;
+    }
+
+    .fade-enter,
+    .fade-leave-active {
+      opacity: 0;
+    }
+
+    .fade-enter-active,
+    .fade-leave-active {
+      transition: opacity 0.5s;
+    }
+
+    #appLoading {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    #appLoading img {
+      position: absolute;
+      height: 30%;
+      /* height: 100%; */
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translateY(-50%) translateX(-50%);
+      transform: translateY(-50%) translateX(-50%);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="appLoading">
+    <img src="./loading.gif" alt="loading" />
+  </div>
+  <div id="app">
+  </div>
+  <div class="footer-container">
+    <p class="footer-font">© 2021 Pauliana. All Rights Reserved.</p>
+    <script type="text/javascript">
+      document.write(unescape(
+        "%3Cspan id='cnzz_stat_icon_1279845817'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/stat.php%3Fid%3D1279845817%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"
+        ));
+    </script>
+  </div>
+</body>
+
+</html>
+<script>
+  document.getElementsByClassName('footer-container')[0].style.display = 'flex'
+
+
+  const cliWidth = document.documentElement.clientWidth;
+  this.height = document.documentElement.clientHeight
+  console.log(document.documentElement.clientHeight);
+  if (cliWidth > 768) {
+    console.log('比例');
+    console.log(window.devicePixelRatio);
+    let userAgent = navigator.userAgent; // 取得浏览器的userAgent字符串
+    console.log('浏览器内核');
+    console.log(userAgent);
+    let isChrome = navigator.userAgent.indexOf('Chrome') > -1 || navigator.userAgent.indexOf('WebKit') > -1; // 是否是谷歌 
+    console.log('谷歌' + isChrome); // 返回 true  则是 ，false  则不是
+    if (isChrome) {
+      if (window.devicePixelRatio > 1) {
+        console.log(1 / window.devicePixelRatio);
+        let s = Number(1 / window.devicePixelRatio);
+        document.body.style.zoom = s;
+        sessionStorage.setItem('zoom', s)
+      } else {
+        document.body.style.zoom = 1;
+        sessionStorage.setItem('zoom', 1)
+      };
+    } else {
+      alert('请使用谷歌浏览器或360极速浏览器打开该网页');
+    }
+  } else {
+    console.log('999999');
+  }
+</script>
+<script>
+  (function (d, w, c) {
+    w.ChatraID = 'EFziSXt5R6zpBhx79';
+    var s = d.createElement('script');
+    w[c] = w[c] || function () {
+      (w[c].q = w[c].q || []).push(arguments);
+    };
+    s.async = true;
+    s.src = 'https://call.chatra.io/chatra.js';
+    if (d.head) d.head.appendChild(s);
+  })(document, window, 'Chatra');
+</script>

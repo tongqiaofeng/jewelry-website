@@ -1,0 +1,5 @@
+{"ignore": [
+	"./public/lib/mui/js/mui.js", //路径一定要写对路径一定要写对路径一定要对
+    "./public/lib/mui/js/mui.zoom.js",
+    "./public/lib/mui/js/mui.previewimage.js"
+]}
